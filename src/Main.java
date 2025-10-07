@@ -6,8 +6,9 @@ public class Main {
         Input input = new Input();
         List<Question> questions = new ArrayList<>();
         int points = 0;
-        questions.add(new ChoiceQuestion("What is 1 + 1?", List.of("1", "2", "3", "4"), 10, 2));
-        questions.add(new ChoiceQuestion("What is 3 * 3?", List.of("3", "6", "9", "12"), 10, 3));
+        questions.add(new ChoiceQuestion("What is 1 + 1?", List.of("1", "2", "3", "4"), 10, List.of(2)));
+        questions.add(new ChoiceQuestion("What is 3 * 3?", List.of("3", "6", "9", "12"), 10, List.of(3)));
+        questions.add(new ChoiceQuestion("3 can be divided by", List.of("3", "6", "1", "12"), 10, List.of(1, 3)));
         questions.add(new TrueFalseQuestion("Is Obama's last name Obama?", 5, true));
 
         for(Question question : questions) {
