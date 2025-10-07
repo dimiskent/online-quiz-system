@@ -23,4 +23,7 @@ public class TrueFalseQuestion extends Question {
     public int getSize() {
         return 1;
     }
+    public int getPoints() {
+        return points;
+    }
 }

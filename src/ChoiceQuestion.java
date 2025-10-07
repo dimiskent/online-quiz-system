@@ -33,4 +33,7 @@ public class ChoiceQuestion extends Question {
         }
         return 0;
     }
+    public int getPoints() {
+        return points;
+    }
 }
