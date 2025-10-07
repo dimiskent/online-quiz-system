@@ -14,7 +14,9 @@ public class Main {
         for(Question question : questions) {
             question.displayQuestion();
             int min = (question instanceof TrueFalseQuestion) ? 0 : 1;
-            points += question.givePointsForAnswer(input.getChoice(min, question.getSize()));
+            int reward = question.givePointsForAnswer(input.getChoice(min, question.getSize()));
+            System.out.println("Your answer was " + (reward == 0 ? "WRONG" : "CORRECT"));
+            points += reward;
         }
 
         System.out.println("Results: " + points);
